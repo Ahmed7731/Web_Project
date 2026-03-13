@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Books</title>
+</head>
+<body style="background-color: powderblue">
+<center>
+<h1>The Librarry</h1>
+</center>
+
+<center>
+<nav>
+<a href="home.html">Home</a> |
+<a href="login.html">Login</a> |
+<a href="signup.html">Sign Up</a> | 
+<a href="available_books.html">Available Books</a> |
+<a href="usersearch.html">Search</a> |
+<a href="borrowed_books.html">Borrow Books</a> |
+<a href="adminaddbook.html">Add Book</a> |
+<a href="manage_books.html">Manage Library</a> |
+<a href="viewbooks.html">View My Books</a> 
+</nav>
+</center>
+<br/>
+
+<center>
+     <form>
+<table border="3">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Category</th>
+    <th>Status</th>
+   
+  </tr>  
+
+  <tr>
+    <td>CS111</td>
+    <td>Intoduction to Computer Science</td>
+    <td>DOC.elramly</td>
+    <td>CS</td>
+    <td> <select name="status" id="status">
+        <option value="Available">Available</option>
+         <option value="Borrowed">Borrowed</option>
+    </select>
+    </td>
+    
+  </tr>
+
+  <tr>
+    <td>IS111</td>
+    <td>Fundamentals of Database System</td>
+    <td>Ramez Elmasri</td>
+    <td>Database</td>
+    <td>
+        <select name="status" id="status">
+        <option value="Available">Available</option>
+        <option value="Borrowed">Borrowed</option>
+        </select>
+    </td>
+    
+  
+  </tr>
+
+  <tr>
+    <td>AI111</td>
+    <td>Machine Learnimg</td>
+    <td>Stuart Russell</td>
+    <td>AI</td>
+    <td>
+        <select name="status" id="status">
+        <option value="Available">Available</option>
+         <option value="Borrowed">Borrowed</option>
+        </select>
+    </td>
+    
+   
+  </tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>

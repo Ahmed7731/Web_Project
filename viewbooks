@@ -72,8 +72,8 @@
     <td>AI</td>
     <td>
         <select name="status" id="status">
+        <option value="Borrowed">Borrowed</option>
         <option value="Available">Available</option>
-         <option value="Borrowed">Borrowed</option>
         </select>
     </td>
     

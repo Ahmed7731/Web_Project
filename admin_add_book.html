@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add book</title>
+</head>
+<body>
+
+<center>
+        <h1>Library Management System</h1>
+    <hr>
+<nav>
+<a href="home.html">Home</a> |
+<a href="login.html">Login</a> |
+<a href="signup.html">Sign Up</a> | 
+<a href="available_books.html">Available Books</a> |
+<a href="search.html">Search</a> |
+<a href="borrowed_books.html">Borrow Books</a> |
+<a href="admin_add_book.html">Add Book</a> |
+<a href="admin_edit_book.html">Edit Book</a> |
+<a href="manage_books.html">Manage Library</a> |
+<a href="viewbooks.html">View My Books</a> 
+</nav>
+<hr>
+
+<h1>Add book</h1>
+
+<div style = "display:flex; justify-content:center;">
+        <p style = "text-align:center; max-width: 300px;"  >
+            Add multiple books at once.
+            click add book then, type in the data. 
+            Once finished click submit to add all books at once.
+        </p>
+</div>
+
+<form action="add_books.php" method="post">
+<table border = "1" cellpadding = "4" cellspacing ="0" id = "submit_table">
+<thead>
+<tr>
+<th> Book Name </th>
+<th> Author </th>
+<th> Category</th>
+<th> Count</th>	
+<th> Actions </th>
+ </tr>
+ </thead>
+ <tbody>
+<tr>
+<td> <input type = "text" name = "Name" placeholder = "name"></td>
+<td> <input type = "text" name = "Author" placeholder = "author"></td>
+<td> <input type = "text" name = "Category" placeholder = "category"></td>
+<td> <input type = "text" name = "Count" placeholder = "count"></td>
+<td> <button type="button">delete</button></td>
+ </tr>
+<tr>
+<td> <input type = "text" name = "Name" placeholder = "name"></td>
+<td> <input type = "text" name = "Author" placeholder = "author"></td>
+<td> <input type = "text" name = "Category" placeholder = "category"></td>
+<td> <input type = "text" name = "Count" placeholder = "count"></td>
+<td><button type="button">delete</button></td>
+ </tr>
+ <tr>
+<td> <input type = "text" name = "Name" placeholder = "name"></td>
+<td> <input type = "text" name = "Author" placeholder = "author"></td>
+<td> <input type = "text" name = "Category" placeholder = "category"></td>
+<td> <input type = "text" name = "Count" placeholder = "count"></td>
+<td><button type="button">delete</button></td>
+ </tr>
+ </tbody>
+</table>
+
+<button type="button" id = "add_book">  Add another book </button>
+<button type="button" id = "submit_all_button">  Submit All </button>
+</form>
+</center>
+</body>
+</html>

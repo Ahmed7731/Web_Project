@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Books</title>
+    <title>View Books</title>
 </head>
 <body>
 <center>
@@ -20,67 +20,34 @@
 <a href="borrowed_books.html">Borrow Books</a> |
 <a href="admin_add_book.html">Add Book</a> |
 <a href="admin_edit_book.html">Edit Book</a> |
-<a href="manage_books.html">Manage Library</a>
+<a href="manage_books.html">Manage Library</a> 
 </nav>
 <hr>
 </center>
 <br/>
+
+<center>
+  <h3>Books List</h3>
+</center>
+<br/>
+
 <center>
      <form>
 <table border="3">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Author</th>
-    <th>Category</th>
-    <th>Status</th>
-   
-  </tr>  
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Author</th>
+<th>Category</th>
+<th>Status</th>
+</tr>
 
-  <tr>
-    <td>CS111</td>
-    <td>Intoduction to Computer Science</td>
-    <td>DOC.elramly</td>
-    <td>CS</td>
-    <td> <select name="status" id="status">
-        <option value="Available">Available</option>
-         <option value="Borrowed">Borrowed</option>
-    </select>
-    </td>
-    
-  </tr>
-
-  <tr>
-    <td>IS111</td>
-    <td>Fundamentals of Database System</td>
-    <td>Ramez Elmasri</td>
-    <td>Database</td>
-    <td>
-        <select name="status" id="status">
-        <option value="Available">Available</option>
-        <option value="Borrowed">Borrowed</option>
-        </select>
-    </td>
-    
-  
-  </tr>
-
-  <tr>
-    <td>AI111</td>
-    <td>Machine Learnimg</td>
-    <td>Stuart Russell</td>
-    <td>AI</td>
-    <td>
-        <select name="status" id="status">
-        <option value="Borrowed">Borrowed</option>
-        <option value="Available">Available</option>
-        </select>
-    </td>
-   
-   
-  </tr>
+<tr>
+<td colspan="5">No books added yet.</td>
+</tr>
 
 </table>
+
 </form>
 	<hr>
         <p>© 2026 Library Management System</p>

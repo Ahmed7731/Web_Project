@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Books</title>
+    <title>My Books</title>
 </head>
 <body>
 <center>
 <h1>Library Management System</h1>
+<br/>
+        <h2>Admin</h2>
 </center>
 <hr>
+
 <center>
 <nav>
 <a href="home.html">Home</a> |
-<a href="login.html">Login</a> |
-<a href="signup.html">Sign Up</a> | 
-<a href="available_books.html">Available Books</a> |
-<a href="search.html">Search</a> |
-<a href="borrowed_books.html">Borrow Books</a> |
 <a href="admin_add_book.html">Add Book</a> |
 <a href="admin_edit_book.html">Edit Book</a> |
-<a href="manage_books.html">Manage Library</a> |
-<a href="viewbooks.html">View My Books</a> 
+<a href="manage_books.html">Manage Library</a>|
+<a href="view_books.html">View books</a>
 </nav>
 <hr>
+<h2>Mange books</h2>
 </center>
-<br/>
-
-<center>
-  <h3>No Books Added Yet</h3>
-</center>
-<br/>
 
 <center>
      <form>
@@ -41,6 +34,7 @@
     <th>Author</th>
     <th>Category</th>
     <th>Status</th>
+	
    
   </tr>  
 
@@ -49,22 +43,15 @@
     <td></td>
     <td></td>
     <td></td>
-    <td> 
+    <td> <select name="status" id="status">
+        <option value="Available">Available</option>
+         <option value="Borrowed">Borrowed</option>
+    </select>
     </td>
-    
+   
   </tr>
 
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>
-        
-    </td>
-    
   
-  </tr>
 
   <tr>
     <td></td>
@@ -72,14 +59,18 @@
     <td></td>
     <td></td>
     <td>
-        
-    </td>
+        <select name="status" id="status">
+        <option value="Borrowed">Borrowed</option>
+        <option value="Available">Available</option>
+        </select>
     
    
   </tr>
 
 </table>
 </form>
+<hr>
+        <p>© 2026 Library Management System</p>
 </center>
 </body>
 </html>

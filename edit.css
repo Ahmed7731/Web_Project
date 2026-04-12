@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Layout */
+body > * {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    color: #fff;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Titles */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-weight: 300;
+    color: #ddd;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #eee;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+
+p {
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+/* Inputs */
+select,
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* Placeholder */
+::placeholder {
+    color: #ddd;
+}
+
+/* Focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Button */
+input[type="submit"] {
+    background: #00c6ff;
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/* Lines */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 20px 0;
+}
+
+/* Footer */
+p:last-child {
+    text-align: center;
+    font-size: 0.8em;
+    color: #ccc;
+}

@@ -1,76 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
+    <meta charset="UTF-8" />
     <title>Add book</title>
-</head>
-<body>
 
-<center>
-        <h1>Library Management System </h1>
-        <br/>
-        <h2>Admin</h2>
-    <hr>
-<nav>
-<a href="home.html">Home</a> |
-<a href="admin_add_book.html">Add Book</a> |
-<a href="admin_edit_book.html">Edit Book</a> |
-<a href="admin_manage_books.html">Manage Library</a>|
-<a href="admin_view_books.html">View books</a>
+    <link rel="stylesheet" href="admin_add_book.css" />
+    <script src="admin_add_book.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1>Library Management System</h1>
+        <hr />
+        <nav>
+          <a href="home.html">Home</a> | <a href="login.html">Login</a> |
+          <a href="signup.html">Sign Up</a> |
+          <a href="view_books.html">Available Books</a> |
+          <a href="search.html">Search</a> |
+          <a href="borrowed_books.html">Borrow Books</a> |
+          <a href="admin_add_book.html">Add Book</a> |
+          <a href="admin_edit_book.html">Edit Book</a> |
+          <a href="manage_books.html">Manage Library</a>
+        </nav>
+        <hr />
+      </header>
 
-</nav>
-<hr>
+      <main class="main_content">
+        <h2>Add book</h2>
 
-<h1>Add book</h1>
-
-<div style = "display:flex; justify-content:center;">
-        <p style = "text-align:center; max-width: 300px;"  >
-            Add multiple books at once.
-            click add book then, type in the data. 
-            Once finished click submit to add all books at once.
+        <p class="instructions">
+          Add multiple books at once. click add book then, type in the data.
+          Once finished click submit to add all books at once.
         </p>
-</div>
 
-<form action="add_books.php" method="post">
-<table border = "1" cellpadding = "4" cellspacing ="0" id = "submit_table">
-<thead>
-<tr>
-<th> Book Name </th>
-<th> Author </th>
-<th> Category</th>
-<th> Count</th>	
-<th> Actions </th>
- </tr>
- </thead>
- <tbody>
-<tr>
-<td> <input type = "text" name = "Name" placeholder = "name"></td>
-<td> <input type = "text" name = "Author" placeholder = "author"></td>
-<td> <input type = "text" name = "Category" placeholder = "category"></td>
-<td> <input type = "text" name = "Count" placeholder = "count"></td>
-<td> <button type="button">delete</button></td>
- </tr>
-<tr>
-<td> <input type = "text" name = "Name" placeholder = "name"></td>
-<td> <input type = "text" name = "Author" placeholder = "author"></td>
-<td> <input type = "text" name = "Category" placeholder = "category"></td>
-<td> <input type = "text" name = "Count" placeholder = "count"></td>
-<td><button type="button">delete</button></td>
- </tr>
- <tr>
-<td> <input type = "text" name = "Name" placeholder = "name"></td>
-<td> <input type = "text" name = "Author" placeholder = "author"></td>
-<td> <input type = "text" name = "Category" placeholder = "category"></td>
-<td> <input type = "text" name = "Count" placeholder = "count"></td>
-<td><button type="button">delete</button></td>
- </tr>
- </tbody>
-</table>
-<br>
-<button type="button" id = "add_book">  Add another book </button>
-<button type="button" id = "submit_all_button">  Submit All </button>
-</form>
-<hr>
+        <form id="submit_form">
+          <table id="add_table" class="table_main">
+            <thead id="table_head">
+              <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Count</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr class="tr_input">
+                <td><input type="text" name="Name" placeholder="name" /></td>
+                <td>
+                  <input type="text" name="Author" placeholder="author" />
+                </td>
+                <td>
+                  <input type="text" name="Category" placeholder="category" />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="Count"
+                    placeholder="count"
+                    min="1"
+                  />
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="DeleteBtn"
+                    onclick="removeBook(this)"
+                  >
+                    delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <center>
+          <div class="sumbit_section">
+          <button type="button" id="add_book" onclick="addBook()">
+            Add another book
+          </button>
+          <button type="button" id="submit_all_button" onclick="">Submit All</button>
+              </div>
+          </center>
+
+        </form>
+        <center>
+   
         <p>© 2026 Library Management System</p>
-</center>
-</body>
+        </center>
+
+      </main>
+    </div>
+         <hr />
+  </body>
 </html>

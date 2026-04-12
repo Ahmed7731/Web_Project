@@ -48,13 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         validForm = false;
         return;
       }
-
-      booksData.push({
-        name: name,
-        author: author,
-        category: category,
-        count: Number(bookCount),
-      });
       if (isNaN(count) || Number(bookCount) <= 0) {
         alert(
           `Enter a valid Number that is greater than 0 in the row ${index + 1}.`,
@@ -62,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
         validForm = false;
         return;
       }
+      booksData.push({
+        name: name,
+        author: author,
+        category: category,
+        count: Number(bookCount),
+      });
+
     });
     if (validForm) {
       console.log("Books ready to submit:", booksData);

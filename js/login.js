@@ -1,3 +1,30 @@
+
+if(localStorage.getItem("userProfile")!=null){
+    window.location.href = "./index.html";
+}
+
+async function verify(email, password){
+    try{
+        const response = await fetch('../json/users.json');
+        if (!response.ok) {
+        throw new Error("Failed to load file");
+        }
+        const users = await response.json();
+        user = users.find(usr => usr.email == email && usr.password==password);
+        console.log("Verified user: "+user);
+        if(user ==  null){
+            return -1;
+        }
+        else{
+            return user.id;
+        }
+    }catch(error){
+        console.error("Error:", error);
+        return -1;
+    }
+    
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.querySelector("form");
@@ -9,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const showBtn = document.getElementById("show");
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
         let emailValue = email.value.trim();       
@@ -33,14 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
         if (passwordValue === "") {
             passwordError.textContent = "Password is required";
             isValid = false;
-        } else if (passwordValue.length < 6) {
-            passwordError.textContent = "Password must be at least 6 characters";
-            isValid = false;
         }
-
-        if (isValid) {
+        const verified = await verify(emailValue, passwordValue);
+        console.log(verified);
+        if(verified>=0&&isValid){
+            localStorage.setItem("userProfile", verified);
+            window.location.href = "./index.html";
+        }
+        else if (isValid) {
             passwordError.textContent = "Email or password is incorrect";
         }
+
     });
     
 showBtn.style.display = "none";

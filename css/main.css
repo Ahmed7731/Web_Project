@@ -10,7 +10,6 @@ body {
 
 #wrapper {
     width: 80%;
-    max-width: 700px;
     background-color: #fffefb;
     padding: 40px;
     border: 1px solid #ddd;
@@ -19,10 +18,24 @@ body {
 }
 
 nav a {
-    color: #333;
     text-decoration: none;
-    font-size: 0.9em;
+    color: #0056b3;
+    font-weight: bold;
 }
+
+nav a:hover {
+    color: #003d82;
+}
+
+nav a:not(:last-child)::after {
+    content: "|";
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #211d1d;
+}
+
 
 .icon {
     height: 100px;
@@ -34,7 +47,6 @@ nav a {
 h1 {
     font-size: 2em;
     text-decoration: underline;
-    margin-bottom: 5px;
 }
 
 .status {
@@ -91,4 +103,36 @@ footer {
 hr {
     border: 0;
     border-top: 1px solid #333;
+}
+
+td {
+    border-bottom: 1px solid;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    color: #495057;
+    padding: 12px;
+    border-bottom: 2px solid;
+}
+
+input {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2f86e2;
+}
+
+table {
+    margin-bottom: 24px;
+    width: 100%;
+    border-collapse: collapse;
 }

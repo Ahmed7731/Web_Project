@@ -2,47 +2,46 @@
 <html>
 <head>
   <title>Library - Books</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/user_search.js"></script>
+  
 </head>
 <body>
+<div id="wrapper">
 <center>
 
 <h1>Library Management System</h1>
 <br>
-    <h2>Hello User</h2>
 <hr>	
 	
 <nav>
-<a href="home.html">Home</a> |
-<a href="user_search.html">Search</a> |
-<a href="user_borrowed_books.html">Borrowed Books</a> |
+<a href="index.html">Home</a>
+<a href="user_search.html">Search</a>
+<a href="user_borrowed_books.html">Borrowed Books</a>
 <a href="user_available_books.html">Available Books</a>
 
 </nav>
 <hr>
   <h1>Available Books</h1>
   <form>
-    <input type="text" name="search" placeholder="Search by title, author, category">
-    <button type="submit">Search</button>
+    <input type="text" id="search" name="search" placeholder="Search by title, author, category">
+    <button type="submit" id="button">Search</button>
   </form>
 
-  <table border="1">
+  <table border="1" id="searchResults">
     <tr>
+      <th>Cover</th>
       <th>Title</th>
       <th>Author</th>
-      <th>Category</th>
+      <th>Categories</th>
       <th>Status</th>
       <th>Action</th>
     </tr>
-    <tr>
-      <td>Example Book</td>
-      <td>Author Name</td>
-      <td>Fiction</td>
-      <td>Available</td>
-      <td><a href="book_details.html">View</a></td>
-    </tr>
   </table>
   <hr>
-        <p>© 2026 Library Management System</p>
+        <footer>© 2026 Library Management System</footer>
 </center>
+</div>
 </body>
+
 </html>

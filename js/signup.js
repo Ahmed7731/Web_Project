@@ -65,22 +65,8 @@ if (confirmPasswordValue === "") {
     confirmPasswordError.textContent = "Passwords do not match";
     isValid = false;
 }
-// Radio check
-if (!adminYes.checked && !adminNo.checked) {
-    adminError.textContent = "Please select an option";
-    isValid = false;
-}
 
-    if (isValid) {
 
-    const selectedAdmin = document.querySelector('input[name="is_admin"]:checked');
-
-    if (selectedAdmin.value === "1") {
-        window.location.href = "admin_home.html"; // admin page
-    } else {
-        window.location.href = "user_home.html"; // user page
-    }
-}
 });
     
 function setupToggle(input, button) {

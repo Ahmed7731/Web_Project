@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-<center>
+<div id="wrapper">
 <h1>Library Management System</h1>
 <hr>
 <nav>
@@ -48,24 +48,13 @@
     <button type="button" id="show2">Show</button>
 </div>
 <p class="error" id="confirm-password-error"></p>
-
-    Is Admin:
-    <input type="radio" id="admin_yes" name="is_admin" value="1">
-    <label for="admin_yes">Yes</label>
-
-    <input type="radio" id="admin_no" name="is_admin" value="0">
-    <label for="admin_no">No</label>
-    <p class="error" id="admin-error">
-        
-    </p>
-
     <br><br>
 
     <input type="submit" value="Sign Up" id="signup-Btn">
 </form>
 <hr>
         <p>© 2026 Library Management System</p>
-</center>
 <script src="signup.js"></script>
+</div>
 </body>
 </html>

@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Library Management System</title>
-    <link rel="stylesheet" href="home.css">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-        <h1>Library Management System</h1>
-    <hr>
-	    
-<nav>
-<a href="home.html">Home</a> |
-<a href="login.html">Login</a> |
-<a href="signup.html">Sign Up</a>
-</nav>
-    <hr>
-        <h2>Welcome to Our Library</h2>
-        <p>
-            This Online Library system allows users to search and borrow books easily. <br>
-            Users can create an account, login, view available books, and borrow books. <br>
-            Admins can manage the library by adding, editing, and deleting books.
-        </p>
-        <br>
+<div class="container" id="wrapper">
 
-<button id="login-btn">Login</button>
-<button id="signup-btn">Create an Account</button>   
+    <h1>Library Management System</h1>
+    <h2 id="welcome">Hello User 👋</h2>
+
     <hr>
-        <p>© 2026 Library Management System</p>
-    <script src="home.js"></script>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="user_search.html">Search</a>
+        <a href="user_borrowed_books.html">Borrowed Books</a>
+        <a href="user_available_books.html">Available Books</a>
+        <a href="home.html">Logout</a>
+    </nav>
+
+    <hr>
+
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🔍 Search Books</h3>
+            <p>Find books by title, author, or category</p>
+            <a href="user_search.html">Go</a>
+        </div>
+
+        <div class="card">
+            <h3>📚 Available Books</h3>
+            <p>Browse all books in the library</p>
+            <a href="user_available_books.html">View</a>
+        </div>
+
+        <div class="card">
+            <h3>📖 Borrowed Books</h3>
+            <p>Check your borrowed books and return dates</p>
+            <a href="user_borrowed_books.html">Open</a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p>© 2026 Library Management System</p>
+
+</div>
+
+<script type="module" src="js/user_home.js"></script>
 </body>
 </html>

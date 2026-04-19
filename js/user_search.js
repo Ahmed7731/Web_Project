@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             table.innerHTML += `
             <tr>
-                <td>${book.name}</td>
-                <td>${book.author}</td>
-                <td>${book.category}</td>
+            <td> </td>
+                <td>${book.title}</td>
+                <td>${book.authors}</td>
+                <td>${book.categories}</td>
                 <td>${book.count > 0 ? "Available" : "Not Available"}</td>
 
                 <td>

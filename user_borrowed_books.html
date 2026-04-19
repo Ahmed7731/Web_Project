@@ -1,43 +1,39 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>Book</title><!--We would need to replace this with the Book's title once we get dynamic stuff-->
-
+    <link rel="stylesheet" href="css/user_borrowed_books.css">
+  <script src="js/user_borrowed_books.js"></script>
+    <title>Borrowed Books</title>
 </head>
-    <body>
-        <center>
-		
-		<h1>Library Management System</h1>
-        <br>
-        <h2>Hello User</h2>
-		<hr>
-		<nav>
+<body>
+
+<center>
+
+<h1>Library Management System</h1>
+<h2>Hello User</h2>
+
+<hr>
+
+<nav>
 <a href="home.html">Home</a> |
 <a href="user_search.html">Search</a> |
 <a href="user_borrowed_books.html">Borrowed Books</a> |
-<a href="user_available_books.html">Available Books</a>
-
+<a href="user_available_books.html">Available Books</a>|
+<a href="home.html">Logout</a>
 </nav>
-<hr>
-<h2>My Borrowed books</h2>
-            <table border>
-                <tr>
-                    <th>Name</th>
-                    <th>Author</th>
-                    <th>Category</th>
-                    <th>Time Borrowed</th>
-                    <th>Time to Return</th>
-                </tr>
-                <tr>
-                    <td>About Cs</td>
-                    <td>Benjamin</td>
-                    <td>CS</td>
-                    <td>1 March 2026</td>
-                    <td>24 March 2026</td>
-                </tr>
-            </table>
-			  <hr>
-        <p>© 2026 Library Management System</p>
-        </center>
-    </body>
 
+<hr>
+
+<h2>My Borrowed Books</h2>
+
+<table border="1" id="borrowedTable"></table>
+
+<hr>
+<p>© 2026 Library Management System</p>
+
+</center>
+
+<script src="js/user_borrowed_books.js"></script>
+
+</body>
 </html>

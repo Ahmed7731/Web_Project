@@ -1,67 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Book</title>
-
-    <link rel="stylesheet" href="edit.css">
-</head>
-
-<body>
-
-<div id="wrapper">
-
+<!doctype html>
+<html>
+  <head>
+    <title>Edit book</title>
+    <script src="js/admin_edit_book.js"></script>
+    <link rel="stylesheet" href="css/admin_edit_book.css" />
+  </head>
+  <center>
     <h1>Library Management System</h1>
+    <br />
     <h2>Admin</h2>
+  </center>
 
-    <hr>
+  <hr />
 
+  <center>
     <nav>
-<a href="home.html">Home</a> |
-<a href="admin_add_book.html">Add Book</a> |
-<a href="admin_edit_book.html">Edit Book</a> |
-<a href="admin_manage_books.html">Manage Library</a>|
-<a href="admin_view_books.html">View books</a>
+      <a href="home.html">Home</a> |
+      <a href="admin_add_book.html">Add Book</a> |
+      <a href="admin_edit_book.html">Edit Book</a> |
+      <a href="admin_manage_books.html">Manage Library</a>|
+      <a href="admin_view_books.html">View books</a>|
+      <a href="home.html">Logout</a>
+    </nav>
+  </center>
 
-</nav>
+  <hr />
 
-    <hr>
+  <center>
+    <form>
+      <h3>Select a Book to Edit</h3>
+      <div class="form_layout">
+        <div class="left_form">
+          <p>Select Book</p>
+          <select id="bookSelect">
+            <option></option>
+          </select>
+          <br /><br />
+          <h3>Edit Book Details</h3>
 
-    <h2>Select a Book to Edit</h2>
+          <p>Book ID</p>
+          <input type="text" id="bookId" placeholder="Book ID" />
 
-    <form id="editForm">
-        <p>Select Book</p>
-        <select id="bookSelect"></select>
+          <p>Book Name</p>
+          <input type="text" id="bookName" placeholder="Book Name" />
 
-        <h3>Edit Book Details</h3>
-        
-        <p>Book ID</p>
-        <input type="text" id="bookId">
+          <p>Author</p>
+          <input type="text" id="author" placeholder="Author" />
 
-        <p>Book Name</p>
-        <input type="text" id="bookName">
-        
-        <p>Author</p>
-        <input type="text" id="author">
-        
-        <p>Category</p>
-        <input type="text" id="category">
+          <p>Category</p>
+          <input type="text" id="category" placeholder="Category" />
 
-        <p>Description</p>
-        <textarea id="description" rows="5"></textarea>
-
-        <input type="submit" value="Save Changes">
+          <p>Description</p>
+          <textarea
+            id="description"
+            placeholder="Book description"
+            style="height: 100px"
+          ></textarea>
+        </div>
+        <div class="right_form">
+          <p>Cover</p>
+          <input
+            type="text"
+            id="thumbnailURL"
+            placeholder="Paste image URL here"
+          />
+          <div class="image_preview_container">
+            <img
+              id="thumbnailPreview"
+              alt="Book  Cover"
+              style="display: none"
+            />
+            <span id="imagePlaceHolder"> No Image selected</span>
+          </div>
+          <input id="change-image-btn" type="button" value="Change Image" />
+        </div>
+      </div>
+      <input type="submit" value="Submit" />
     </form>
+  </center>
+  >
 
-    <hr>
-
-    <footer>
-        <p>© 2026 Library Management System</p>
-    </footer>
-
-</div>
-
-<script src="editscript.js"></script>
-
-</body>
+  <center>
+    <hr />
+    <p>© 2026 Library Management System</p>
+  </center>
 </html>

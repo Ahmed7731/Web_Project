@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Library - Books</title>
+    <title>Search Books</title>
+    <link rel="stylesheet" href="css/user_search.css">
+    <script src="js/user_borrow.js"></script>
+<script src="js/user_search.js"></script>
 </head>
 <body>
+
 <center>
 
 <h1>Library Management System</h1>
-<br>
-    <h2>Hello User</h2>
-<hr>	
-	
+<h2>Hello User</h2>
+
+<hr>
+
 <nav>
-<a href="home.html">Home</a> |
+<a href="user_home.html">Home</a> |
 <a href="user_search.html">Search</a> |
 <a href="user_borrowed_books.html">Borrowed Books</a> |
-<a href="user_available_books.html">Available Books</a>
-
+<a href="user_available_books.html">Available Books</a> |
+<a href="home.html">Logout</a>
 </nav>
-<hr>
-  <h1>Available Books</h1>
-  <form>
-    <input type="text" name="search" placeholder="Search by title, author, category">
-    <button type="submit">Search</button>
-  </form>
 
-  <table border="1">
+<hr>
+
+<h2>Search Books</h2>
+
+<form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Search anything...">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table border="1" id="searchTable">
     <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Category</th>
-      <th>Status</th>
-      <th>Action</th>
+        <th>Cover</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Action</th>
     </tr>
-    <tr>
-      <td>Example Book</td>
-      <td>Author Name</td>
-      <td>Fiction</td>
-      <td>Available</td>
-      <td><a href="book_details.html">View</a></td>
-    </tr>
-  </table>
-  <hr>
-        <p>© 2026 Library Management System</p>
+</table>
+
+<hr>
+<p>© 2026 Library Management System</p>
+
 </center>
+
 </body>
 </html>

@@ -7,12 +7,12 @@ window.onload = function () {
     let row = document.createElement("tr");
 
     row.innerHTML = `
-            <td><input placeholder="Book ID"></td>
             <td><input placeholder="Book Name"></td>
             <td><input placeholder="Author"></td>
             <td><input placeholder="Category"></td>
             <td><input type="number" placeholder="Page Count"></td>
             <td><input placeholder="Description"></td>
+            <td><input type="text" placeholder="Paste Image Url here"></td>
             <td><input type="text" placeholder="Paste Image Url here"></td>
             <td><img src=""></td>
             <td><button type="button" class="delete" style="margin-right: 6px">X</button>
@@ -58,13 +58,14 @@ window.onload = function () {
       let inputs = row.querySelectorAll("input");
 
       let book = {
-        _id: inputs[0].value.trim(),
-        title: inputs[1].value.trim(),
-        authors: inputs[2].value.trim(),
-        categories: inputs[3].value.trim(),
-        pageCount: Number(inputs[4].value),
-        longDescription: inputs[5].value.trim(),
-        thumbnailUrl: inputs[6].value.trim(),
+        _id: books.length+1,
+        title: inputs[0].value.trim(),
+        authors: inputs[1].value.trim(),
+        categories: inputs[2].value.trim(),
+        pageCount: Number(inputs[3].value),
+        longDescription: inputs[4].value.trim(),
+        thumbnailUrl: inputs[5].value.trim(),
+        count: Number(inputs[6].value.trim())
       };
 
       if (!book._id || !book.title) {
@@ -80,7 +81,6 @@ window.onload = function () {
 
       books.push(book);
     });
-
     localStorage.setItem("books", JSON.stringify(books));
 
     alert("Books added successfully !");
@@ -91,7 +91,8 @@ window.onload = function () {
 
 async function uploadJson() {
   let table = document.getElementById("submit_table");
-  const books = await loadBooks();
+  let books = await loadBooks();
+  books.forEach(book => book.count = 1);
   localStorage.setItem("books", JSON.stringify(books));
   alert("Books added successfully !");
   location.reload();

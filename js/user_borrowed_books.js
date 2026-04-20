@@ -1,25 +1,39 @@
-document.addEventListener("DOMContentLoaded", function () {
+function returnBook(id){
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    let books = JSON.parse(localStorage.getItem("books"));
+    books.forEach(book => {if(book._id === id){book.count++;}});
+    user.borrowedBooks=user.borrowedBooks.filter(book => book._id !== id);
+    localStorage.setItem("currentUser",JSON.stringify(user));
+    localStorage.setItem("books", JSON.stringify(books));
+    location.reload();
+}
 
-    let borrowed = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
+document.addEventListener("DOMContentLoaded", function () {
+    let borrowed = JSON.parse(localStorage.getItem("currentUser")).borrowedBooks || [];
+    console.log(JSON.parse(localStorage.getItem("currentUser")));
     let table = document.getElementById("borrowedTable");
 
     table.innerHTML = `
     <tr>
-        <th>Name</th>
+        <th>Cover</th>
+        <th>Title</th>
         <th>Author</th>
         <th>Category</th>
         <th>Borrow Date</th>
         <th>Return Date</th>
+        <th>Early Return</th>
     </tr>`;
 
     borrowed.forEach(book => {
         table.innerHTML += `
         <tr>
-            <td>${book.name}</td>
-            <td>${book.author}</td>
-            <td>${book.category}</td>
+            <td><img src = ${book.thumbnailUrl}></td>
+            <td>${book.title}</td>
+            <td>${book.authors[0]}</td>
+            <td>${book.categories.join(", ")}</td>
             <td>${book.borrowDate}</td>
             <td>${book.returnDate}</td>
+            <td><button onclick="returnBook(${book._id})">Return</button></td>
         </tr>
         `;
     });

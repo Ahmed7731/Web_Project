@@ -1,29 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  
+const params = new URLSearchParams(window.location.search);
 
-    let books = JSON.parse(localStorage.getItem("books")) || [];
-    let index = localStorage.getItem("selectedBook");
+const id = params.get('bookID'); 
 
+  if (id === null || !books[id]) {
+    document.body.innerHTML = "<h2>No Book Selected</h2>";
+    return;
+  }
 
-    if (index === null || !books[index]) {
-        document.body.innerHTML = "<h2>No Book Selected ❌</h2>";
-        return;
-    }
+  let book = books[id];
+document.getElementById("back").href = document.referrer;
+  document.getElementById("title").innerText = book.title;
+  document.getElementById("bAuthor").innerText = book.authors;
+  document.getElementById("bCategory").innerText = book.categories;
+  document.getElementById("bStatus").innerText = book.status;
+  document.getElementById("bDesc").innerText = book.longDescription;
+  document.getElementById("cover").src = book.thumbnailUrl;
 
-    let book = books[index];
-
-    
-    document.getElementById("title").innerText = book.name;
-    document.getElementById("bName").innerText = book.name;
-    document.getElementById("bAuthor").innerText = book.author;
-    document.getElementById("bCategory").innerText = book.category;
-    document.getElementById("bStatus").innerText =
-    document.getElementById("bDesc").innerText = book.description;
-        book.count > 0 ? "Available" : "Not Available";
-
-   
-    document.getElementById("borrowBtn").onclick = function () {
-        borrowBook(index);
-        window.location.href = "user_borrowed_books.html";
-    };
-
+  document.getElementById("borrowBtn").onclick = function () {
+    borrowBook(id);
+    window.location.href = "user_borrowed_books.html";
+  };
 });

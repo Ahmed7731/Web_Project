@@ -82,3 +82,11 @@ input:focus {
     border: 2px solid #3a5890;
     box-shadow: 0 0 8px rgba(58,88,144,0.5);
 }
+
+.description-class{
+    width: 80%;
+    text-align: start;
+    padding: 10px;
+    border: 1px dashed;
+    margin-bottom: 10px;
+}

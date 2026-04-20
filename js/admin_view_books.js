@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         row.innerHTML = `
             <td>${book._id}</td>
             <td>${book.title}</td>
-            <td>${book.authors}</td>
-            <td>${book.categories}</td>
+            <td>${book.authors[0]||""}</td>
+            <td>${book.categories.join(", ")}</td>
             <td>${book.count > 0 ? "Available" : "Borrowed"}</td>
         `;
 

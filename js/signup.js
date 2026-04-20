@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
             username,
             email,
             password,
-            isAdmin: isAdmin.value === "1"
+            isAdmin: isAdmin.value === "1",
+            borrowedBooks: []
         };
 
         users.push(newUser);

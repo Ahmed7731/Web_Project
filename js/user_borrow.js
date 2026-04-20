@@ -1,7 +1,7 @@
 function borrowBook(index) {
 
     let books = JSON.parse(localStorage.getItem("books")) || [];
-    let borrowed = JSON.parse(localStorage.getItem("borrowedBooks")) || [];
+    let borrowed = JSON.parse(localStorage.getItem("currentUser")).borrowedBooks || [];
 
     let book = books[index];
 
@@ -12,7 +12,7 @@ function borrowBook(index) {
     }
 
     
-    let exists = borrowed.some(b => b.id === book.id);
+    let exists = borrowed.some(b => b._id === book._id);
     if (exists) {
         alert("You already borrowed this book ");
         return;
@@ -28,7 +28,10 @@ function borrowBook(index) {
     book.count--;
 
     localStorage.setItem("books", JSON.stringify(books));
-    localStorage.setItem("borrowedBooks", JSON.stringify(borrowed));
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    console.log(user);
+    user.borrowedBooks=borrowed;
+    localStorage.setItem("currentUser", JSON.stringify(user));
 
     alert("Borrowed successfully ");
 
